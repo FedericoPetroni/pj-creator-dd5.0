@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Generador de Personajes (Versión 1.0)</title>
+</head>
+
+<body>
+    <div id="cabecera">
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="player-generator.html">Generador de Personajes</a>
+            <a href="history.html">Historial de Cambios</a>
+        </nav>
+        <header>
+            <h1>Generador de Personajes</h1>
+        </header>
+    </div>
+
+    <main id="cuerpo">
+        <div id="container-generador">
+            <form>
+                <fieldset>
+                    <legend>Identificación del Personaje</legend>
+                    <div class="container-li">
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="container-li">
+                        <label for="raze">Raza</label>
+                        <select name="raze" id="raze">
+                            <option value="">--Seleccione una opción--</option>
+                            <option value="enano">Enano</option>
+                            <optgroup label="Semiraza Enanos" style="font-style: italic;">
+                                <option value="enano-colina">Enano de las Colinas</option>
+                                <option value="enano-montaña">Enano de las Montañas</option>
+                            </optgroup>
+                            <option value="elfo">Elfo</option>
+                            <optgroup label="Semiraza Elfo" style="font-style: italic;">
+                                <option value="elfo-alto">Alto Elfo</option>
+                                <option value="elfo-bosques">Elfo de los Bosques</option>
+                                <option value="elfo-oscuro">Elfo Oscuro (Drow)</option>
+                            </optgroup>
+                            <option value="mediano">Mediano</option>
+                            <optgroup label="Semiraza Mediano" style="font-style: italic;">
+                                <option value="mediano-piesligeros">Mediano Piesligeros</option>
+                                <option value="mediano-fornido">Mediano Fornido</option>
+                            </optgroup>
+                            <option value="humano">Humano</option>
+                            <option value="draconido">Dracónido</option>
+                            <option value="gnomo">Gnomo</option>
+                            <optgroup label="Semiraza Gnomo" style="font-style: italic;">
+                                <option value="gnomo-bosque">Gnomo del Bosque</option>
+                                <option value="gnomo-roca">Gnomo de la Roca</option>
+                            </optgroup>
+                            <option value="semielfo">Semielfo</option>
+                            <option value="semiorco">Semiorco</option>
+                            <option value="tiflin">Tiflin</option>
+                        </select>
+                    </div>
+                    <div class="container-li">
+                        <label for="class">Clase</label>
+                        <select name="class" id="class">
+                            <option value="">--Seleccione una opción--</option>
+                            <option value="barbaro">Bárbaro</option>
+                            <option value="bardo">Bardo</option>
+                            <option value="brujo">Brujo</option>
+                            <option value="clerigo">Clerigo</option>
+                            <option value="druida">Druida</option>
+                            <option value="explorador">Explorador</option>
+                            <option value="guerrero">Guerrero</option>
+                            <option value="hechicero">Hechicero</option>
+                            <option value="mago">Mago</option>
+                            <option value="monje">Monje</option>
+                            <option value="paladin">Paladín</option>
+                            <option value="picaro">Pícaro</option>
+                        </select>
+                    </div>
+                    <div class="container-li">
+                        <label for="bio">Biografía</label>
+                        <textarea name="bio" id="bio" placeholder="Describa a su personaje..."></textarea>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Atributos del Personaje</legend>
+                    <div class="container-li">
+                        <li>Fuerza</li><span id="fuerza"></span>
+                    </div>
+                    <div class="container-li">
+                        <li>Destreza</li><span id="destreza"></span>
+                    </div>
+                    <div class="container-li">
+                        <li>Constitución</li><span id="constitucion"></span>
+                    </div>
+                    <div class="container-li">
+                        <li>Inteligencia</li><span id="inteligencia"></span>
+                    </div>
+                    <div class="container-li">
+                        <li>Sabiduría</li><span id="sabiduria"></span>
+                    </div>
+                    <div class="container-li">
+                        <li>Carisma</li><span id="carisma"></span>
+                    </div>
+                    <div class="container-li">
+                        <li>Tiradas</li><span id="tiradas"></span>
+                    </div>
+                    <div class="container-btn">
+                        <button id="btn-generar-1" type="submit">Opción 1</button>
+                        <button id="btn-generar-2" type="submit">Opción 2</button>
+                        <button id="btn-generar-3" type="submit">Opción 3</button>
+                        <button id="restablecer" type="reset">Limpiar</button>
+                    </div>
+                </fieldset>
+            </form>
+            <div id="container-bio-jugador">
+                <div class="container-btn">
+                <button id="generar-hoja-pj">Generar Hoja</button>
+                </div>
+                <h3>Hoja de Personaje</h3>
+                <h4>Caracterísiicas del Personaje:</h4>
+                <p>Nombre: <span id="hoja-nombre">---</span></p>
+                <p>Clase: <span id="hoja-clase">----</span></p>
+                <p>Raza: <span id="hoja-raza">---</span></p>
+                <p>Biografía: <span id="hoja-bio">Sin una biografía</span></p>
+                <hr>
+                <h4>Atributos del Personaje</h4>
+                <p>Fuerza: <span id="atributo-fuerza">---</span></p>
+                <p>Destreza: <span id="atributo-destreza">---</span></p>
+                <p>Constitución: <span id="atributo-constitucion">---</span></p>
+                <p>Inteligencia: <span id="atributo-inteligencia">---</span></p>
+                <p>Sabiduría: <span id="atributo-sabiduria">---</span></p>
+                <p>Carisma: <span id="atributo-carisma">---</span></p>
+            </div>
+        </div>
+    </main>
+
+    <footer id="pie">
+        <p>Este generador de Personajes es Desarrollado por Federico Petroni &copy;2025</p>
+    </footer>
+</body>
+
+<script src="script.js"></script>
+
+</html>

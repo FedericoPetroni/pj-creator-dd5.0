@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Generador de Personajes (Versión 1.0)</title>
+</head>
+
+<body>
+    <div id="cabecera">
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="player-generator.html">Generador de Personajes</a>
+            <a href="history.html">Historial de Cambios</a>
+        </nav>
+        <header>
+            <h1>Historial de Cambios</h1>
+        </header>
+    </div>
+
+    <main id="cuerpo">
+        <h2>Historial de Versiones</h2>
+
+        <article>
+            <h3>Versión 0.2v - <span class="span-date">Viernes 27/04/2025</span></h3>
+            <section class="container">
+                <h4>Prototipo de generador de Hoja de Personaje</h4>
+                <p>Dentro de la sección del <em>Generador de Personajes</em> se incorpora al costado de la generación de
+                    los datos del perosnaje, una hoja que incrusta los resultados del personaje armado.</p>
+                <p>Este prototipo de <strong>Hoja de Personaje</strong> pretende proyectar una hoja imprimible que
+                    muestre todos los atributos del personaje generado junto con las modificatorias por selección de
+                    clase y raza según lo establecido en el <em>Manual del Jugador</em> de la versión de Dungeon &
+                    Dragons 5.0. El esquema irá modificándose a medida que el proyecto crezca.</p>
+            </section>
+            <section class="container">
+                <h4>Generación de Estilos Básicos</h4>
+                <p>Se han incorporado algunos estilos básicos de CSS para mejorar la interfaz de uso. La finalidad es
+                    facilitar el uso y la lectura, no pretende a esta altura del proyecto ser un modelo final.</p>
+                <p>Se realizará una remodelación completa de la estilización cuando el proyecto contemple una versión lo
+                    suficientemente avanzada como para gestionar un número de atributos más complejo. (Se espera que
+                    esto ocurra en la <mark>versión 0.8v</mark> aproximadamente).</p>
+            </section>
+        </article>
+
+        <article>
+            <h3>Versión 0.1v <span class="span-date">Miércoles 23/04/2025</span></h3>
+            <section class="container">
+                <h4>Comienzo del Proyecto</h4>
+                <p>
+                    El proyecto se realiza en HTML, CSS y JavaScript puro.
+                </p>
+                <p>
+                    Se configuran las primeras bases del generador de personajes a través de tres botones. Éstos
+                    sólo
+                    ejecutan funcionalidades de seleccionar los puntos de atributos del personaje a través de
+                    métodos
+                    aleatorios.
+                </p>
+            </section>
+            <section class="container">
+                <h4>Rasgos seleccionables del Personaje</h4>
+                <p>
+                    Se dispone la opción de redactar un <strong>Nombre</strong> y seleccionar la
+                    <strong>Raza</strong> y
+                    la <strong>Clase</strong>, estos últimos de acuerdo a las opciones brindadas por el <em>Manual
+                        del
+                        Jugador</em> de <em>Dungeon & Dragons, versión 5.0</em>, además de la asignación de puntos
+                    de
+                    los 6 atributos de un personaje por medio de tres tipos de tiradas aleatorias distintas.
+                </p>
+            </section>
+            <section class="container">
+                <h4>Tipos de Generación de Atributos</h4>
+                <p>
+                    <span class="title-container">Generación 1:</span> Realiza una tirada aleatoria de números sobre
+                    cada atributo entre el
+                    1 y el 8, sin condicionalidad alguna. Cada valor aleatorio seleccionado para cada atributo se le
+                    suma un valor base de 7 para el cálculo final del valor del atributo
+                </p>
+                <p>
+                    <span class="title-container">Generación 2:</span> Utiliza el mecanismo de tiradas de un dado de 6
+                    caras (16d) un total
+                    de cuatro veces, seleccionando las 3 tiradas más altas, sumando sus valores y agregando dicho valor
+                    a cada atributo. Para esta versión, las tiradas y asignación del valor de atributo final se realiza
+                    de forma secuencial, en el siguiente órden: <em>1 - Fuerza, 2 - Destreza, 3 - Constitución, 4 -
+                        Inteligencia, 5 - Sabiduría, 6 - Carisma.</em>
+                </p>
+                <p>
+                    <span class="title-container">Generación 3:</span> Se ejecuta la fórmula de asignación de 27 puntos,
+                    pundiendo
+                    distribuirse sobre cada uno de los atributos con la condición de que cada uno no pueda tener un
+                    valor menor a 8 ni mayor a 15. Como el proceso es <em>aleatorio</em>, se realizan unas tiradas de
+                    dados de 8 caras (1d8) un total de 6 veces hasta que la suma de los números sacados sumen un total
+                    de 27. Al cumplir la condición, los puntos se reparten entre los atributos de acuerdo al órden en
+                    que hayan salido los valores en cada tirada (valor del dado + base de 7), repartiéndose
+                    secuencialmente en el siguiente órden: <em>1 - Fuerza, 2 - Destreza, 3 - Constitución, 4 -
+                        Inteligencia, 5 - Sabiduría, 6 - Carisma</em>.
+                </p>
+            </section>
+            <section class="container">
+                <h4>Consideraciones de la versión</h4>
+                <li>De momento no incorpora más funcionalidades de selección, salgo un apartado de Biografía para
+                    ser completado por el jugador.</li>
+                <li>La selección de la Raza y la Clase aún no condiciona los atributos del Personaje creado por esta
+                    herramienta.</li>
+                <li>No se ha realizado aún una selección de daño físico, puntos de vida, puntos de magia ni otras
+                    condiciones del personaje creado.</li>
+            </section>
+        </article>
+    </main>
+
+    <footer id="pie">
+        <p>Este generador de Personajes es Desarrollado por Federico Petroni &copy;2025</p>
+    </footer>
+</body>
+
+</html>

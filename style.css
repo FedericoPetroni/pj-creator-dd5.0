@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+/*     border: 1px solid grey; */
+    /* bordes de ayuda. ELIMINAR LUEGO */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* DISPOSICIÓN DE ELEMENTOS */
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 1024px;
+    max-width: 1024px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+
+/* CABECERA */
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+/* Botones del Navbar */
+.navbar a {
+    color: aliceblue;
+    background-color: brown;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px;
+}
+
+.navbar a:hover {
+    background-color: orangered;
+}
+
+/* Contenedores y sus elementos */
+.container {
+    margin: 10px;
+}
+
+.container h4 {
+    font-variant: small-caps;
+}
+
+.title-container {
+    font-weight: bold;
+    font-variant: small-caps;
+    text-decoration: underline
+}
+
+/* Header, Main */
+
+header {
+    padding: 0 50px;
+    height: 200px;
+    background-image: linear-gradient(brown, beige);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: darkslategray;
+}
+
+/* MAIN */
+#cuerpo {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+#cuerpo h2 {
+    margin: 20px 100px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#cuerpo p,
+li {
+    margin: 0.5em;
+    text-indent: 1.2em;
+    list-style: square;
+}
+
+/* FOOTER */
+#pie {
+    width: 100%;
+    height: 100px;
+    color: white;
+    background-color: brown;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CONTENEDORES DE GENERADOR DE PERSONAJES */
+#container-generador {
+    display: flex;
+    flex-direction: row;
+}
+
+form {
+    padding: 10px;
+    width: 50%;
+}
+
+form fieldset {
+    border: 5px solid #2c2c2c;
+    border-radius: 15px;
+    margin: 15px 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form legend {
+    color: #2c2c2c;
+    border: 5px solid #2c2c2c;
+    border-radius: 15px;
+    padding: 0 50px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2em;
+    font-variant: small-caps;
+    letter-spacing: 3px;
+}
+
+.container-li {
+    display: flex;
+    margin: 0;
+    padding: 2px 0;
+}
+
+.container-li span,
+.container-li select,
+.container-li input,
+.container-li textarea {
+    width: 55%;
+    background-color: white;
+}
+
+.container-li textarea {
+    height: 50px;
+    resize: vertical;
+}
+
+.container-li li,
+.container-li label {
+    margin: 0;
+    width: 45%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-btn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container-btn button {
+    margin: 15px 0;
+    width: 24%;
+    height: 25px;
+    border-radius: 15px;
+    background-color: teal;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.container-btn button:hover {
+    background-color: darkslategray;
+}
+
+.container-li input,
+.container-li textarea,
+.container-li select,
+.container-btn button {
+    cursor: pointer;
+}
+
+#container-bio-jugador {
+    width: 50%;
+    padding: 0 10px;
+    background-color: bisque;
+    border: 3px solid brown;
+    border-radius: 15px;
+}
+
+
+/* CSS para la hoja de HISTORIAL DE VERSIONES */
+article {
+    margin-bottom: 50px;
+}
+
+article h3 {
+    padding: 10px;
+    border-bottom: 1px solid grey;
+}
+
+.span-date {
+    font-size: 0.9em;
+    font-weight: normal;
+    font-style: italic;
+}
